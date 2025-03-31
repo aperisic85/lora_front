@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.sensor-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.battery {
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+.data-section pre {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.gateways ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gateways li {
+  margin-bottom: 0.5rem;
+}
