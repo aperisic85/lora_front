@@ -1,32 +1,65 @@
-.container {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem;
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on mobile */
+  gap: 1rem; /* Add space between cards */
+  padding: 1rem;
+}
+
+/* Sensor Card */
 .sensor-card {
   background: white;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sensor-card h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem); /* Larger heading for sensor name */
+}
+
+.status {
+  margin-bottom: 1rem;
 }
 
 .battery {
-  color: #4f46e5;
   font-weight: bold;
+}
+
+/* Data Section */
+.data-section {
+  margin-top: 1rem;
+}
+
+.data-section h3 {
+  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Larger heading size */
 }
 
 .data-section pre {
   background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 0.25rem;
+  padding: 1rem; /* Add more padding for emphasis */
+  border-radius: 4px;
+
+  /* Prevent overflow */
+  white-space: pre-wrap; /* Wrap text onto the next line */
+  word-wrap: break-word; /* Break long words */
+
+  /* Add scroll for extremely long text */
+  max-height: calc(50vh); /* Limit height to half of viewport height */
+  overflow-y: auto; /* Scroll vertically if necessary */
+
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size for preformatted text */
 }
 
-.gateways ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.gateways li {
-  margin-bottom: 0.5rem;
-}
+/* Gateways Section */
+.gateways {
+    opacity: 0.8; /* Slightly transparent */
+    transition: opacity 0.3s ease; /* Smooth transition */}
